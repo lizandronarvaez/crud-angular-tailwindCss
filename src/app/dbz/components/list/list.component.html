@@ -1,0 +1,35 @@
+<h4 class="my-2 text-left" *ngIf="characterList.length; else notCharacterList">
+  Listado de personajes
+</h4>
+<ng-template #notCharacterList>
+  <h6 class="text-sm font-bold text-red-400">
+    No existen personajes en la lista
+  </h6>
+</ng-template>
+<div>
+  <!-- Como declarar el indice en un array-->
+  <div
+    *ngFor="
+      let character of characterList;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+    [ngClass]="{
+      'bg-orange-200 hover:bg-orange-400 transition-all ease-in-out duration-500': isEven,
+      'bg-slate-300 hover:bg-slate-400 transition-all ease-in-out duration-500': isOdd
+    }"
+    class="p-3 flex justify-between border-b border-b-slate-100 cursor-pointer font-light hover:font-semibold "
+  >
+    <p>{{ i + 1 }}.</p>
+    <p>{{ character.name }} - {{ character.power }}</p>
+    <button
+      (click)="emitDeleteCharacter(character.id || '')"
+      class="px-2 rounded-full bg-white text-red-500 font-bold hover:bg-red-500 hover:text-white transition-all ease-in-out duration-500"
+    >
+      x
+    </button>
+  </div>
+</div>

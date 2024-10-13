@@ -1,0 +1,20 @@
+<div>
+  <h1 class="text-xl text-gray-600 py-5 text-center md:text-left">Component DGBZ</h1>
+  <hr />
+
+  <div class="md:flex md:justify-between bg-gray-50  md:p-5 max-w-[1200px] mx-auto mt-10">
+    <div class="flex-1 p-5">
+      <!-- Componente para recibir datos
+      Primero: El nombre con el que declaramos el array o elemento de datos.
+      Segundo: Le pasamos los datos en las comillas
+      -->
+      <dbz-list
+        [characterList]="characters"
+        (onDeleteCharacter)="onDeleteCharacter($event)"
+      />
+    </div>
+    <div class="p-5 flex-1">
+      <dbz-add-character (onAddNewCharacter)="onAddNewCharacter($event)" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="bg-stone-200">
+  <h2 class="text-xl text-center py-3">Pequeño ejercicio con angular</h2>
+  <div class="text-center py-5">
+    <p class="bg-orange-400 text-white font-bold py-3 px-2 w-3/12 mx-auto">
+      Contador: {{ counter }}
+    </p>
+    <div class="py-3 space-x-5">
+      <button
+        (click)="incrementCounter(5)"
+        class="px-3 py-2 bg-blue-400 text-white font-bold rounded-sm"
+      >
+        Aumentar contador
+      </button>
+      <button
+        (click)="decrementCounter()"
+        class="px-3 py-2 bg-red-400 text-white rounded-sm"
+      >
+        Disminuir contador
+      </button>
+      <button
+        class="px-3 py-2 bg-violet-600 text-white rounded-sm"
+        (click)="resetCounter()"
+      >
+        Reset Contador
+      </button>
+    </div>
+  </div>
+</div>

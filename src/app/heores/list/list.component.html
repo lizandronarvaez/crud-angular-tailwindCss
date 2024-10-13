@@ -1,0 +1,36 @@
+<div class="bg-orange-300 w-full">
+  <h1 class="text-3xl text-center py-10">Componente List de Heroes</h1>
+  <hr />
+  <div>
+    <h3 class="text-xl text-center bg-orange-500 mt-5 p-2 w-1/2 mx-auto">
+      Elementos de la lista
+    </h3>
+    <div class="py-5 px-10">
+      <ul class="py-5">
+        <li *ngFor="let item of heroNames" class="font-normal">> {{ item }}</li>
+      </ul>
+      <span *ngIf="heroDelete">Hero eliminado: <span class="text-red-600">  {{ heroDelete }}</span></span>
+      <hr />
+      <div>
+        <p class="py-4 font-light" *ngIf="heroNames.length;else notHeroList">
+          Elementos en la lista de personajes:
+          <span class="font-bold" *ngIf="heroNames.length">{{
+            heroNames.length
+          }}</span>
+        </p>
+        <ng-template #notHeroList>
+          <p class="font-bold" *ngIf="!heroNames.length">
+            No existen personajes en la lista
+          </p>
+        </ng-template>
+      </div>
+      <button
+        *ngIf="heroNames.length > 0"
+        (click)="removeLastHero()"
+        class="px-3 py-2 bg-red-700 text-white"
+      >
+        Borrar último personaje
+      </button>
+    </div>
+  </div>
+</div>
