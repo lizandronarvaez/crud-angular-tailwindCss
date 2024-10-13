@@ -1,7 +1,7 @@
-# Pequeño Crud - Angular & TailwindCss
+# NgCrud - Angular & TailwindCss
 
 ## Descripción
-¡Bienvenido al repositorio de este pequeño crud en desarrollo con Angular y Tailwind.
+¡Bienvenido al repositorio de este pequeño crud en desarrollo con Angular y TailwindCss.
 
 Este proyecto se trata de un pequeño crud para poner en práctica las bases de angular, aunque próxmimente estaré desarrollando cuando acabe el curso un crud conectado a una ApiRest desarrollada con NodeJs o Springboot, usando una base de datos relacional con PostgresSql.
 
@@ -9,5 +9,5 @@ Este proyecto se trata de un pequeño crud para poner en práctica las bases de 
 
 - **Angular**
 - **TailwindCss**
-- **Vercel**
+- **GitHub-Pages**
 
